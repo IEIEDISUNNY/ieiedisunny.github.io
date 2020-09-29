@@ -1,60 +1,44 @@
-<!-- ---------------------------------------------------------------------- -->
-<!-- NOTE: Please add the following <META> element to your page <HEAD>. -->
-<!-- If necessary, please modify the charset parameter to specify the -->
-<!-- character set of your HTML page. -->
-<!-- ---------------------------------------------------------------------- -->
- 
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
- 
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
-function timestamp() {
-var response = document.getElementById("g-recaptcha-response");
-if (response == null || response.value.trim() == "")
-{
-var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
-elems["ts"] = JSON.stringify(new Date().getTime());
-document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
-}
-}
-setInterval(timestamp, 500);
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
 </script>
-<script type="text/javascript">
-function recaptcha_callback(){
-$('.button').prop("disabled", false);
-}
-</script>
-<!-- ---------------------------------------------------------------------- -->
-<!-- NOTE: Please add the following <FORM> element to your page. -->
-<!-- ---------------------------------------------------------------------- -->
- 
-<form action="https://editest.ieiworld.com:9443/salesforce/v1/cases" method="POST" Authorization = "Basic YXBpX3NmZGM6Znl3VWpmT3p4ZGVOR1RkVlRmSWpX">
- 
-<input type="hidden" name='captcha_settings' value='{"keyname":"SecondCaptcha","fallback":"true","orgId":"00DQ000000Ee123","ts":""}'/>
-<input type="hidden" name="oid" value="00DQ000000Ee123"/>
-<input type="hidden" name="retURL" value="http://www.sfdcpoint.com"/>
- 
-<!-- ---------------------------------------------------------------------- -->
-<!-- NOTE: These fields are optional debugging elements. Please uncomment -->
-<!-- these lines if you wish to test in debug mode. -->
-<!-- <input type="hidden" name="debug" value=1> -->
-<!-- <input type="hidden" name="debugEmail" value="nitish@test.com"> -->
-<!-- ---------------------------------------------------------------------- -->
- 
-<label for="name">Name</label><input id="ContactId" maxlength="40" name="ContactId" size="20" type="text" required="true"/><br/>
 
-<label for="email">Email</label><input id="CP_Email__c" maxlength="80" name="email" size="20" type="text" required="true"/><br/>
- 
-<label for="phone">Phone</label><input id="ContactPhone" maxlength="40" name="phone" size="20" type="text" /><br/>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
 
-<label for="Subject">Subject</label><input id="ContactPhone" maxlength="40" name="Subject" size="20" type="text" /><br/>
+<form action="https://qnap--dev01.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
 
-<label for="Description">Description</label><input id="Description__c" maxlength="50000" name="Description" size="70" type="text" required="true"/><br/>
- 
-<div class="g-recaptcha" data-sitekey="6Le9otEZAAAAAAFj2JkSJutFnRF4w3CyDP3eKR7q" data-callback="recaptcha_callback"></div><br/>
- 
-<input type="submit" name="submit" id="submitBtn" disabled="true" class="button"/>
- 
+<input type=hidden name='captcha_settings' value='{"keyname":"CaseRecaptcha","fallback":"true","orgId":"00DN0000000R3hn","ts":""}'>
+<input type=hidden name="orgid" value="00DN0000000R3hn">
+<input type=hidden name="retURL" value="https://ieiedisunny.github.io/">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="remlee.delacruz@salesforce.com">                                 -->
+<!--  ----------------------------------------------------------------------  -->
+
+<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
+<label for="description">Description</label><textarea name="description"></textarea><br>
+
+<div class="g-recaptcha" data-sitekey="6Le9otEZAAAAAAFj2JkSJutFnRF4w3CyDP3eKR7q"></div><br>
+<input type="submit" name="submit">
+
 </form>
