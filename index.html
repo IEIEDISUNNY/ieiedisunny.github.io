@@ -30,7 +30,7 @@ $('.button').prop("disabled", false);
 <!-- NOTE: Please add the following <FORM> element to your page. -->
 <!-- ---------------------------------------------------------------------- -->
  
-<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+<form action="https://editest.ieiworld.com:9443/salesforce/v1/cases" method="POST" Authorization = "Basic YXBpX3NmZGM6Znl3VWpmT3p4ZGVOR1RkVlRmSWpX">
  
 <input type="hidden" name='captcha_settings' value='{"keyname":"SecondCaptcha","fallback":"true","orgId":"00DQ000000Ee123","ts":""}'/>
 <input type="hidden" name="oid" value="00DQ000000Ee123"/>
@@ -43,17 +43,17 @@ $('.button').prop("disabled", false);
 <!-- <input type="hidden" name="debugEmail" value="nitish@test.com"> -->
 <!-- ---------------------------------------------------------------------- -->
  
-<label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true"/><br/>
+<label for="name">Name</label><input id="ContactId" maxlength="40" name="ContactId" size="20" type="text" required="true"/><br/>
+
+<label for="email">Email</label><input id="CP_Email__c" maxlength="80" name="email" size="20" type="text" required="true"/><br/>
  
-<label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true"/><br/>
+<label for="phone">Phone</label><input id="ContactPhone" maxlength="40" name="phone" size="20" type="text" /><br/>
+
+<label for="Subject">Subject</label><input id="ContactPhone" maxlength="40" name="Subject" size="20" type="text" /><br/>
+
+<label for="Description">Description</label><input id="Description__c" maxlength="50000" name="Description" size="70" type="text" required="true"/><br/>
  
-<label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" required="true"/><br/>
- 
-<label for="phone">Phone</label><input id="phone" maxlength="40" name="phone" size="20" type="text" /><br/>
- 
-<label for="company">Company</label><input id="company" maxlength="40" name="company" size="20" type="text" required="true"/><br/>
- 
-<div class="g-recaptcha" data-sitekey="6Le9otEZAAAAAAFj2JkSJutFnRF4w3CyDP3eKR7q" data-callback="recaptcha_callback"></div><br/>
+<div class="g-recaptcha" data-sitekey="6LfU8ikUAAAAALP-P1aIMcWaEGqXOpsd6mhL1234" data-callback="recaptcha_callback"></div><br/>
  
 <input type="submit" name="submit" id="submitBtn" disabled="true" class="button"/>
  
