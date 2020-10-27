@@ -1,7 +1,7 @@
 html {
   font-size: 20px; /* px means 'pixels': the base font size is now 10 pixels high  */
   font-family: font-family: 'Merriweather', serif;
-  background-color: #FFECF5;
+  background-color: #F0F0F0;
 }
 
 h1{
@@ -21,12 +21,12 @@ h2{
 	font-size: 30px;
 }
 
-body {
+body{
   width: 800px;
   margin: 100 auto;
-  background-color: #D0D0D0; /*框框背景顏色*/
-  padding: 0 20px 20px 20px; /*框框內部間距 上 右 下 左 */
-  border: 5px solid black; /* 框線粗度 */
+  background-color: #F0F0F0; /*框框背景顏色*/
+  padding: 20px 20px 20px 20px; /*框框內部間距 上 右 下 左 */
+  border: 2px solid black; /* 框線粗度 */
 }
 
 img {
