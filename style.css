@@ -23,7 +23,7 @@ h2{
 
 body {
   width: 800px;
-  margin: 0 auto;
+  margin: 100 auto;
   background-color: #D0D0D0; /*框框背景顏色*/
   padding: 0 20px 20px 20px; /*框框內部間距 上 右 下 左 */
   border: 5px solid black; /* 框線粗度 */
