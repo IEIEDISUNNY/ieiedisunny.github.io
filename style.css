@@ -26,7 +26,7 @@ body{
   margin: 100 auto;
   background-color: #F0F0F0; /*框框背景顏色*/
   padding: 20px 20px 20px 20px; /*框框內部間距 上 右 下 左 */
-  border: 1px solid black; /* 框線粗度 */
+  border: 2px solid black; /* 框線粗度 */
 }
 
 img {
